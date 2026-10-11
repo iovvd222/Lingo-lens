@@ -22,6 +22,10 @@ extension SavedTranslation {
     @NSManaged public var languageName: String?
     @NSManaged public var originalText: String?
     @NSManaged public var translatedText: String?
+    @NSManaged public var ipa: String?
+    @NSManaged public var partOfSpeech: String?
+    @NSManaged public var collocationsJSON: String?
+    @NSManaged public var examplesJSON: String?
 
 }
 

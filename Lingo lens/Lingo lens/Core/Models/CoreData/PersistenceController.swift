@@ -90,6 +90,11 @@ struct PersistenceController {
         } else if let storeURL = container.persistentStoreDescriptions.first?.url {
             print("📂 Core Data store file: \(storeURL.path)")
         }
+
+        container.persistentStoreDescriptions.forEach { description in
+            description.shouldMigrateStoreAutomatically = true
+            description.shouldInferMappingModelAutomatically = true
+        }
         
         // Load the database
         container.loadPersistentStores { description, error in
